@@ -9,8 +9,10 @@ function Search() {
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
-    e.preventDefault();
-    navigate(`/search?q=${input}`);
+    if (input) {
+      e.preventDefault();
+      navigate(`/search?q=${input}`);
+    }
   };
 
   return (
@@ -28,9 +30,6 @@ function Search() {
 }
 
 const FormStyle = styled.form`
-  margin: 0rem 20rem;
-  position: relative;
-
   div {
     width: 100%;
     position: relative;

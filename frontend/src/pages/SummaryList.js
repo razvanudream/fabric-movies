@@ -2,11 +2,17 @@ import React from "react";
 import useSearch from "../hooks/useSearch";
 import { randomTitle } from "../utils/randomizer";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 function SummaryList({ type, searchTerm }) {
   const { movies } = useSearch({ searchTerm: searchTerm ?? randomTitle(type) });
   return (
-    <Grid>
+    <Grid
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {movies.map((movie) => {
         return (
           <Card key={movie.imdbID}>
@@ -25,7 +31,7 @@ function SummaryList({ type, searchTerm }) {
   );
 }
 
-const Grid = styled.div`
+const Grid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 1rem;
