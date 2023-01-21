@@ -1,0 +1,15 @@
+query search {
+  search {
+    results {
+      Title
+      Year
+      Type
+      imdbID
+      Poster
+    }
+    errors {
+      type
+      message
+    }
+  }
+}
