@@ -1,14 +1,14 @@
 import {
-  KIDS,
-  KIDS_TYPE,
-  MOVIES,
-  MOVIES_TYPE,
+  MORPHEUS,
+  MORPHEUS_TYPE,
+  NEO,
+  NEO_TYPE,
   POPULAR,
   POPULAR_TYPE,
+  SPOONBOY,
+  SPOONBOY_TYPE,
   TRENDING,
   TRENDING_TYPE,
-  TV_SHOWS,
-  TV_SHOWS_TYPE,
 } from "./constants";
 
 function randomIntFromInterval(min, max) {
@@ -17,12 +17,12 @@ function randomIntFromInterval(min, max) {
 
 export function randomTitle(type) {
   switch (type) {
-    case MOVIES_TYPE:
-      return MOVIES[randomIntFromInterval(0, MOVIES.length - 1)];
-    case TV_SHOWS_TYPE:
-      return TV_SHOWS[randomIntFromInterval(0, TV_SHOWS.length - 1)];
-    case KIDS_TYPE:
-      return KIDS[randomIntFromInterval(0, KIDS.length - 1)];
+    case NEO_TYPE:
+      return NEO[randomIntFromInterval(0, NEO.length - 1)];
+    case MORPHEUS_TYPE:
+      return MORPHEUS[randomIntFromInterval(0, MORPHEUS.length - 1)];
+    case SPOONBOY_TYPE:
+      return SPOONBOY[randomIntFromInterval(0, SPOONBOY.length - 1)];
     case TRENDING_TYPE:
       return TRENDING[randomIntFromInterval(0, TRENDING.length - 1)];
     case POPULAR_TYPE:

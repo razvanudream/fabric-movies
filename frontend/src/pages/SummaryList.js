@@ -3,8 +3,8 @@ import useSearch from "../hooks/useSearch";
 import { randomTitle } from "../utils/randomizer";
 import styled from "styled-components";
 
-function ListByType({ type }) {
-  const { movies } = useSearch({ searchTerm: randomTitle(type) });
+function SummaryList({ type, searchTerm }) {
+  const { movies } = useSearch({ searchTerm: searchTerm ?? randomTitle(type) });
   return (
     <Grid>
       {movies.map((movie) => {
@@ -14,9 +14,9 @@ function ListByType({ type }) {
               src={
                 movie.Poster !== "N/A"
                   ? movie.Poster
-                  : `${process.env.PUBLIC_URL}/assets/not_found.jpg`
+                  : `${process.env.PUBLIC_URL}/assets/not_found.png`
               }
-              alt=""
+              alt={movie.Title}
             />
           </Card>
         );
@@ -49,4 +49,4 @@ const Card = styled.div`
   }
 `;
 
-export default ListByType;
+export default SummaryList;

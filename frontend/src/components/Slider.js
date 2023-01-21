@@ -33,7 +33,14 @@ function Slider({ movies }) {
         return (
           <SplideSlide key={movie.imdbID}>
             <MovieCard>
-              <img src={movie.Poster} alt={movie.Title} />
+              <img
+                src={
+                  movie.Poster !== "N/A"
+                    ? movie.Poster
+                    : `${process.env.PUBLIC_URL}/assets/not_found.png`
+                }
+                alt={movie.Title}
+              />
               <Gradient />
             </MovieCard>
           </SplideSlide>

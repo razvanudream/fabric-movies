@@ -1,5 +1,5 @@
 import React from "react";
-import MovieListing from "../components/MovieListing";
+import MovieCarousel from "../components/MovieCarousel";
 import useSearch from "../hooks/useSearch";
 import { POPULAR_TYPE, TRENDING_TYPE } from "../utils/constants";
 
@@ -9,8 +9,8 @@ function Home() {
 
   return (
     <div>
-      <MovieListing movies={trending} type={TRENDING_TYPE} />
-      <MovieListing movies={popular} type={POPULAR_TYPE} />
+      <MovieCarousel movies={trending} type={TRENDING_TYPE} />
+      <MovieCarousel movies={popular} type={POPULAR_TYPE} />
     </div>
   );
 }

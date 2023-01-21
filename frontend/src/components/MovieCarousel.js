@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Slider from "./Slider";
 
-function MovieListing({ movies, type }) {
+function MovieCarousel({ movies, type }) {
   return (
     <MovieWrapper>
       <h2>{type}</h2>
@@ -15,4 +15,4 @@ const MovieWrapper = styled.div`
   margin: 4rem 0rem;
 `;
 
-export default MovieListing;
+export default MovieCarousel;

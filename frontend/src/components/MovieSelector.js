@@ -10,19 +10,19 @@ function MovieSelector() {
   return (
     <List>
       <div>
-        <SNavLink to={"/tv"}>
+        <SNavLink to={"/neo"}>
           <FiMonitor />
           <h4>Neo</h4>
         </SNavLink>
       </div>
       <div>
-        <SNavLink to={"/movies"}>
+        <SNavLink to={"/morpheus"}>
           <BiCameraMovie />
           <h4>Morpheus</h4>
         </SNavLink>
       </div>
       <div>
-        <SNavLink to={"/kids"}>
+        <SNavLink to={"/spoonboy"}>
           <TbMoodKid />
           <h4>Spoon Boy</h4>
         </SNavLink>

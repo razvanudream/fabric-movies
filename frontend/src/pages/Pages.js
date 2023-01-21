@@ -1,16 +1,18 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
-import ListByType from "../pages/ListByType";
-import { KIDS_TYPE, MOVIES_TYPE, TV_SHOWS_TYPE } from "../utils/constants";
+import SummaryList from "./SummaryList";
+import { MORPHEUS_TYPE, NEO_TYPE, SPOONBOY_TYPE } from "../utils/constants";
+import SearchResults from "./SearchResults";
 
 function Pages() {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route path="/tv" element={<ListByType type={TV_SHOWS_TYPE} />} />
-      <Route path="/movies" element={<ListByType type={MOVIES_TYPE} />} />
-      <Route path="/kids" element={<ListByType type={KIDS_TYPE} />} />
+      <Route path="/neo" element={<SummaryList type={NEO_TYPE} />} />
+      <Route path="/morpheus" element={<SummaryList type={MORPHEUS_TYPE} />} />
+      <Route path="/spoonboy" element={<SummaryList type={SPOONBOY_TYPE} />} />
+      <Route path="/search" element={<SearchResults />} />
     </Routes>
   );
 }
