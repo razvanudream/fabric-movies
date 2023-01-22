@@ -24,13 +24,12 @@ const rootResolvers = {
           searchTerm
         )}&apikey=720c3666`
       );
+      console.log("🚀 ~ file: index.js:27 ~ search: ~ response", response);
 
       const movies = {
         results: response?.data?.Search,
         errors: [],
       };
-
-      return movies;
 
       /**
        * Since there are only 10 records per page for omdbapi
@@ -62,6 +61,8 @@ const rootResolvers = {
            */
         }
       });
+
+      return movies;
     } catch (err) {
       return {
         results: [],

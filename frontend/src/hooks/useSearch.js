@@ -35,7 +35,7 @@ function useSearch({ searchTerm }) {
     }
 
     if (error || data?.search?.errors?.length) {
-      setErrorMessage(data?.search?.errors[0].message ?? API_ERROR);
+      setErrorMessage(data?.search?.errors[0]?.message ?? API_ERROR);
 
       return;
     }
