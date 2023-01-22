@@ -1,12 +1,12 @@
 import React from "react";
 import MovieCarousel from "../components/MovieCarousel";
 import useSearch from "../hooks/useSearch";
-import { POPULAR_TYPE, TRENDING_TYPE } from "../utils/constants";
+import { SUGGESTED_TYPE, TRENDING_TYPE } from "../utils/constants";
 import { motion } from "framer-motion";
 
 function Home() {
   const { movies: trending } = useSearch({ searchTerm: "Christmas" });
-  const { movies: popular } = useSearch({ searchTerm: "Woman" });
+  const { movies: suggested } = useSearch({ searchTerm: "Woman" });
 
   return (
     <motion.div
@@ -16,7 +16,7 @@ function Home() {
       transition={{ duration: 0.5 }}
     >
       <MovieCarousel movies={trending} type={TRENDING_TYPE} />
-      <MovieCarousel movies={popular} type={POPULAR_TYPE} />
+      <MovieCarousel movies={suggested} type={SUGGESTED_TYPE} />
     </motion.div>
   );
 }

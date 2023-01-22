@@ -3,12 +3,12 @@ import {
   MORPHEUS_TYPE,
   NEO,
   NEO_TYPE,
-  POPULAR,
-  POPULAR_TYPE,
+  SUGGESTED,
   SPOONBOY,
   SPOONBOY_TYPE,
   TRENDING,
   TRENDING_TYPE,
+  SUGGESTED_TYPE,
 } from "./constants";
 
 function randomIntFromInterval(min, max) {
@@ -25,8 +25,8 @@ export function randomTitle(type) {
       return SPOONBOY[randomIntFromInterval(0, SPOONBOY.length - 1)];
     case TRENDING_TYPE:
       return TRENDING[randomIntFromInterval(0, TRENDING.length - 1)];
-    case POPULAR_TYPE:
-      return POPULAR[randomIntFromInterval(0, POPULAR.length - 1)];
+    case SUGGESTED_TYPE:
+      return SUGGESTED_TYPE[randomIntFromInterval(0, SUGGESTED.length - 1)];
     default:
       return "Matrix";
   }
