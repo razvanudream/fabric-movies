@@ -24,7 +24,6 @@ const rootResolvers = {
           searchTerm
         )}&apikey=720c3666`
       );
-      console.log("🚀 ~ file: index.js:27 ~ search: ~ response", response);
 
       const movies = {
         results: response?.data?.Search,
