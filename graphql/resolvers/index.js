@@ -20,9 +20,9 @@ const rootResolvers = {
        * using up too many requests should this API have a limit
        */
       const response = await cachios.get(
-        `https://www.omdbapi.com/?s=${encodeURIComponent(
-          searchTerm
-        )}&apikey=720c3666`
+        `https://www.omdbapi.com/?s=${encodeURIComponent(searchTerm)}&apikey=${
+          process.env.OMDBAPI_KEY
+        }`
       );
 
       const movies = {
