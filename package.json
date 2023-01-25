@@ -11,8 +11,13 @@
   "author": "Razvan Udrea",
   "license": "ISC",
   "dependencies": {
+    "@bull-board/api": "^4.11.0",
+    "@bull-board/express": "^4.11.0",
     "axios": "^1.2.3",
     "body-parser": "^1.20.1",
+    "bull": "^4.10.2",
+    "bull-arena": "^3.30.3",
+    "bullmq": "^3.5.10",
     "cachios": "^4.0.0",
     "concurrently": "^7.6.0",
     "express": "^4.18.2",
